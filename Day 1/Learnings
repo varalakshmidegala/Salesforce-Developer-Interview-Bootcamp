@@ -1,0 +1,33 @@
+# Day 1 – Learning Notes
+
+## Objectives Achieved
+
+* Understood the business requirements of a Placement Management System.
+* Designed a Salesforce data model based on real-world requirements.
+* Created custom objects and established relationships between them.
+* Practiced writing SOQL queries to retrieve and filter data.
+* Developed an Apex class to implement business logic.
+* Implemented an Apex Trigger to validate student eligibility before creating an application.
+
+## Key Concepts Learned
+
+* Salesforce Custom Objects
+* Custom Fields
+* Lookup Relationships
+* SOQL Basics
+* Relationship Queries
+* Apex Classes
+* Apex Triggers
+* Business Logic Implementation
+
+## Skills Gained
+
+* Designing Salesforce data models.
+* Writing efficient SOQL queries.
+* Creating reusable Apex methods.
+* Implementing validation using Before Insert Triggers.
+* Understanding how Salesforce automates business processes.
+
+## Outcome
+
+Successfully built the foundation of the Placement Management System by implementing the data model, SOQL queries, Apex class, and trigger-based validation.
