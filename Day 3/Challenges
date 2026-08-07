@@ -1,0 +1,25 @@
+# Day 3 – Challenges
+
+## Challenges Faced
+
+* Understanding the differences between Validation Rules, Flows, and Apex Triggers.
+* Configuring Record-Triggered Flows correctly.
+* Setting field values automatically using Flow.
+* Creating and testing Validation Rules.
+* Troubleshooting Flow execution and record creation.
+* Understanding the order of execution of Salesforce automation.
+
+## How I Solved Them
+
+* Used Flow Builder to configure Record-Triggered Flows.
+* Tested flows with multiple Application records.
+* Verified Validation Rules using different test scenarios.
+* Reviewed Flow execution paths and corrected configuration issues.
+* Compared declarative automation with Apex to choose the appropriate solution.
+
+## Lessons Learned
+
+* Use Validation Rules to validate user input.
+* Use Flows for automation without writing code.
+* Use Apex only when business logic is too complex for declarative tools.
+* Choosing the right automation tool improves maintainability and performance.
