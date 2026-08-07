@@ -1,0 +1,24 @@
+# Day 1 – Challenges
+
+## Challenges Faced
+
+* Understanding how to design the Placement Management System using custom objects.
+* Selecting the appropriate relationships between Student, Job, and Application objects.
+* Learning SOQL syntax for filtering, sorting, and retrieving related records.
+* Implementing business logic using Apex classes.
+* Writing the first Apex Trigger to validate student eligibility based on CGPA.
+* Understanding Trigger execution and related object queries.
+
+## How I Solved Them
+
+* Reviewed Salesforce documentation and Trailhead modules.
+* Practiced multiple SOQL queries on custom objects.
+* Broke the trigger logic into smaller steps before implementation.
+* Tested the trigger using different student and job records to verify the validation logic.
+
+## Lessons Learned
+
+* A good data model is the foundation of every Salesforce application.
+* SOQL is essential for retrieving and validating Salesforce data.
+* Apex Triggers should be used only when declarative tools cannot meet the business requirement.
+* Testing with different scenarios helps ensure that business logic works correctly.
