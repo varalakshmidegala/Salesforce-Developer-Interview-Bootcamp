@@ -1,0 +1,34 @@
+# Day 2 – Learning Notes
+
+## Objectives Achieved
+
+* Understood how Apex Triggers automate business processes.
+* Learned the difference between Before Triggers and After Triggers.
+* Implemented a bulkified Before Insert Trigger on the Application__c object.
+* Used Trigger Context Variables such as Trigger.new.
+* Applied business rules using Apex instead of hardcoding data.
+* Learned how to use Lists, Sets, and Maps for efficient processing.
+* Understood Salesforce Governor Limits and how to avoid them.
+* Followed best practices by avoiding SOQL and DML statements inside loops.
+
+## Features Implemented
+
+* Automatically set the Application Status to **Applied**.
+* Prevented duplicate job applications.
+* Validated student CGPA against the job's minimum CGPA.
+* Prevented applications after the job closing date.
+* Displayed meaningful error messages when validation failed.
+
+## Key Concepts Learned
+
+* Apex Triggers
+* Before Insert Trigger
+* Trigger Context Variables
+* Governor Limits
+* Bulkification
+* Lists, Sets, and Maps
+* SOQL Best Practices
+
+## Outcome
+
+Successfully developed a bulkified Apex Trigger that enforces multiple business rules while following Salesforce best practices and Governor Limit guidelines.
