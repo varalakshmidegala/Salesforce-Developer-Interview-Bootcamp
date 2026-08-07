@@ -1,0 +1,51 @@
+Day 1 – SOQL Practice
+
+1. Retrieve all students
+SELECT Name
+FROM Student__c;
+
+
+2. Retrieve Name, Department and CGPA
+SELECT Name, Department__c, CGPA__c
+FROM Student__c;
+
+
+3. Retrieve students with CGPA >= 8
+SELECT Name, CGPA__c
+FROM Student__c
+WHERE CGPA__c >= 8;
+
+
+4. Retrieve CSE students with CGPA >= 8
+SELECT Name, Department__c, CGPA__c
+FROM Student__c
+WHERE Department__c = 'CSE'
+AND CGPA__c >= 8;
+
+
+5. Retrieve the top 5 students by CGPA
+SELECT Name, CGPA__c
+FROM Student__c
+ORDER BY CGPA__c DESC
+LIMIT 5;
+
+
+6. Retrieve selected applications
+SELECT Name, Status__c
+FROM Application__c
+WHERE Status__c = 'Selected';
+
+
+7. Retrieve applications with Student and Job details
+SELECT Name,
+       Student__r.Name,
+       Job__r.Name,
+       Status__c
+FROM Application__c;
+
+
+8. Count applications for each job
+SELECT Job__r.Name,
+       COUNT(Id)
+FROM Application__c
+GROUP BY Job__r.Name;
