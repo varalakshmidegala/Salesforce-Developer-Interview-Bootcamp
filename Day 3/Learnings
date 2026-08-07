@@ -1,0 +1,31 @@
+# Day 3 – Learning Notes
+
+## Objectives Achieved
+
+* Understood the differences between Validation Rules, Flows, and Apex Triggers.
+* Learned when to use declarative automation instead of Apex.
+* Built a Record-Triggered Flow to automate business processes.
+* Automatically populated the Application Date when a new Application was created.
+* Created Validation Rules to improve data quality.
+* Learned how Before-Save and After-Save Flows work.
+* Understood how different automation tools work together in Salesforce.
+
+## Features Implemented
+
+* Record-Triggered Flow for automatically setting the Application Date.
+* Validation Rules for business rule enforcement.
+* Enhanced the Placement Management System with declarative automation.
+* Explored automatic Offer Letter creation using Flow.
+
+## Key Concepts Learned
+
+* Validation Rules
+* Record-Triggered Flow
+* Before-Save Flow
+* Flow Builder
+* Declarative Automation
+* Automation Best Practices
+
+## Outcome
+
+Successfully implemented declarative automation using Flow and Validation Rules, reducing the need for Apex wherever possible while improving the Placement Management System.
