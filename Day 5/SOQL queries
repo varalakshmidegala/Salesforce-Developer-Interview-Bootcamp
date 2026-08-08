@@ -1,0 +1,100 @@
+Q1. Display all Student records.
+
+SELECT Id, Name
+FROM Student__c
+
+
+Q2. Display Student Name, CGPA and Department.
+SELECT Id, Name, CGPA__c, Department__c
+FROM Student__c
+
+
+Q3. Display students whose CGPA is greater than or equal to 7.
+
+SELECT Id, Name, CGPA__c
+FROM Student__c
+WHERE CGPA__c >= 7
+
+
+Q4. Display students belonging to the CSE department.
+
+SELECT Id, Name, Department__c
+FROM Student__c
+WHERE Department__c = 'CSE'
+
+
+Q5. Display all Jobs with their minimum CGPA.
+
+SELECT Id, Name, Minimum_CGPA__c
+FROM Job__c
+
+
+Q6. Display Jobs whose minimum CGPA is greater than or equal to 7.
+
+SELECT Id, Name, Minimum_CGPA__c
+FROM Job__c
+WHERE Minimum_CGPA__c >= 7
+
+
+Q7. Display Jobs in ascending order of Minimum CGPA.
+
+SELECT Id, Name, Minimum_CGPA__c
+FROM Job__c
+ORDER BY Minimum_CGPA__c ASC
+
+
+Q8. Display Jobs in descending order of Minimum CGPA.
+
+SELECT Id, Name, Minimum_CGPA__c
+FROM Job__c
+ORDER BY Minimum_CGPA__c DESC
+
+
+Q9. Display all Applications with Student, Job and Status.
+
+SELECT Id, Name, Student__c, Job__c, Status__c
+FROM Application__c
+
+
+Q10. Display Applications whose Status is Applied.
+
+SELECT Id, Name, Student__c, Job__c, Status__c
+FROM Application__c
+WHERE Status__c = 'Applied'
+
+
+Q11. Display Applications where Student is not blank.
+
+SELECT Id, Name, Student__c, Job__c
+FROM Application__c
+WHERE Student__c != null
+
+
+Q12. Display Applications where both Student and Job are present.
+
+SELECT Id, Name, Student__c, Job__c
+FROM Application__c
+WHERE Student__c != null
+AND Job__c != null
+
+
+Q13. Display the first 5 Students.
+
+SELECT Id, Name, CGPA__c
+FROM Student__c
+LIMIT 5
+
+
+Q14. Display Students ordered by CGPA from highest to lowest.
+
+SELECT Id, Name, CGPA__c
+FROM Student__c
+ORDER BY CGPA__c DESC
+
+
+Q15. Find whether a Student has already applied for a particular Job.
+
+SELECT Id, Name, Student__c, Job__c, Status__c
+FROM Application__c
+WHERE Student__c = 'STUDENT_ID'
+AND Job__c = 'JOB_ID'
