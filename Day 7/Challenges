@@ -1,0 +1,48 @@
+# Day 7 – Challenges
+
+## Challenge 1 – Understanding Governor Limits
+
+Initially, it was difficult to understand why correctly written code can still fail.
+
+I learned that Salesforce limits the resources a transaction can consume.
+
+## Challenge 2 – SOQL Inside Loops
+
+I learned that a SOQL query inside a loop can execute repeatedly for every record.
+
+This can cause the transaction to exceed the SOQL query limit.
+
+## Challenge 3 – DML Inside Loops
+
+DML inside a loop can consume too many DML statements.
+
+The better approach is to collect records and perform DML together.
+
+## Challenge 4 – Thinking in Collections
+
+I learned to work with multiple records instead of designing only for a single record.
+
+## Challenge 5 – Using Sets and Maps
+
+I practised using:
+
+- Set<Id> to collect unique Student IDs
+- Map<Id, Student__c> to store queried Students
+- List<Application__c> to process Applications
+
+## Solution
+
+I created a bulkified Apex class that:
+
+1. Collects Student IDs.
+2. Performs one SOQL query.
+3. Stores Students in a Map.
+4. Processes Applications using the Map.
+
+## Key Improvement
+
+I learned to ask:
+
+"What happens when Salesforce sends 200 records?"
+
+instead of only asking whether the code works for one record.
