@@ -1,0 +1,61 @@
+# Day 4 – Challenges
+
+## Challenge 1 – LWC Not Appearing in App Builder
+
+Initially, the placementHome component was not visible in Lightning App Builder.
+
+### Solution
+
+I checked the component metadata and ensured that the component was exposed using:
+
+<isExposed>true</isExposed>
+
+and that lightning__AppPage was included as a target.
+
+After deploying the component to the correct Salesforce org, it appeared in Lightning App Builder.
+
+## Challenge 2 – Deploying to the Correct Org
+
+Multiple Salesforce orgs were connected to VS Code.
+
+### Solution
+
+I checked the connected orgs using:
+
+sf org list
+
+and verified the target org before deploying the LWC.
+
+## Challenge 3 – Button and Welcome Message
+
+The welcome message initially did not display as expected.
+
+### Solution
+
+I used a JavaScript property and event handler:
+
+showWelcomeMessage()
+
+The button calls the method using:
+
+onclick={showWelcomeMessage}
+
+## Challenge 4 – Application Status
+
+I needed to change the application status after clicking a button.
+
+### Solution
+
+I created a JavaScript property:
+
+applicationStatus = 'Not Applied';
+
+and changed it to:
+
+'Applied'
+
+when the button was clicked.
+
+## Engineering Lesson
+
+Build incrementally and test each feature before moving to the next feature.
