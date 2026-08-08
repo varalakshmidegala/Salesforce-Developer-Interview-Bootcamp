@@ -1,0 +1,85 @@
+# Day 5 – Challenges
+
+## Challenge 1 – Understanding SOQL
+
+Initially, it was difficult to understand how to write SOQL queries
+for custom Salesforce objects.
+
+### Solution
+
+Practiced SELECT, WHERE, ORDER BY and LIMIT using Student, Job and
+Application objects.
+
+---
+
+## Challenge 2 – Working with Record IDs
+
+Student and Job record IDs were required while working with
+Application records.
+
+### Solution
+
+Used SOQL to retrieve the required record IDs.
+
+---
+
+## Challenge 3 – Duplicate Application Check
+
+The system needed to prevent the same Student from applying to the
+same Job more than once.
+
+### Solution
+
+Used a SOQL query with Student__c and Job__c to check whether an
+Application already exists.
+
+---
+
+## Challenge 4 – Eligibility Validation
+
+The Student CGPA had to satisfy the Job's Minimum CGPA.
+
+### Solution
+
+Compared:
+
+Student CGPA >= Job Minimum CGPA
+
+Only eligible Students can proceed with the Application.
+
+---
+
+## Challenge 5 – DML Operations
+
+Understanding when to use INSERT and UPDATE was initially confusing.
+
+### Solution
+
+INSERT is used when creating a new Application.
+
+UPDATE is used when changing an existing Application, such as
+changing its Status.
+
+---
+
+## Challenge 6 – Testing Apex
+
+Testing Apex code and checking query results required working with
+actual Salesforce records.
+
+### Solution
+
+Used Salesforce tools and existing Student, Job and Application
+records for testing.
+
+---
+
+## Final Status
+
+SOQL practice completed.
+
+DML practice completed.
+
+ApplicationService deployed successfully.
+
+Day 5 completed.
