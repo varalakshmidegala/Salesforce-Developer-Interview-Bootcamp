@@ -1,0 +1,84 @@
+# Day 7 – Bulk Processing and Governor Limits
+
+## What I Learned
+
+Today I learned why Salesforce developers must design Apex for scale.
+
+Code that works for one record may fail when Salesforce processes many records together.
+
+## Governor Limits
+
+Salesforce is a multi-tenant platform and controls the resources that one transaction can consume.
+
+These limits are called Governor Limits.
+
+Important limits discussed today include:
+
+- SOQL Queries
+- SOQL Records Retrieved
+- DML Statements
+- DML Records
+- CPU Time
+- Heap Size
+
+## SOQL Inside Loops
+
+SOQL inside a loop is dangerous because the query executes once for every record.
+
+Instead of querying repeatedly, I learned to:
+
+1. Collect IDs
+2. Query records once
+3. Store them in a Map
+4. Process records in memory
+
+## DML Inside Loops
+
+DML inside a loop can consume too many DML statements.
+
+Instead of updating records individually, records should be collected into a List and updated together.
+
+## Bulkification
+
+Bulkification means designing Apex so that the same logic works safely for:
+
+- 1 record
+- 10 records
+- 200 records
+- Large workloads
+
+## Collections
+
+### List
+
+Used to process a group of records.
+
+### Set
+
+Used to store unique values such as IDs.
+
+### Map
+
+Used to quickly find a record using its ID.
+
+## Bulk Processing Pattern
+
+Receive records
+↓
+Collect IDs
+↓
+Query once
+↓
+Store results in Map
+↓
+Process records
+↓
+Collect records for DML
+↓
+Perform DML together
+
+## Key Lesson
+
+I learned to stop thinking about only one record.
+
+As a Salesforce Developer, I need to think about the entire collection of records processed by a transaction.
