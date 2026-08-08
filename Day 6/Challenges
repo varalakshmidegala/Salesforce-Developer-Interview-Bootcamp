@@ -1,0 +1,34 @@
+# Day 6 – Challenges
+
+## Challenge 1 – Understanding Trigger Timing
+
+Initially, understanding the difference between before and after triggers was challenging.
+
+I learned that validation should normally happen before the record is saved, while actions that depend on a successful save belong after the record is saved.
+
+## Challenge 2 – Separating Trigger and Business Logic
+
+Another challenge was understanding why the Trigger should not contain all the business logic.
+
+I learned to keep the Trigger short and delegate business processing to ApplicationService or a Handler.
+
+## Challenge 3 – Avoiding Duplicate Logic
+
+Some validation logic existed in both the Handler and Service.
+
+I cleaned the architecture so that CGPA and closing-date validation are handled by ApplicationService.
+
+## Challenge 4 – Testing Trigger Behaviour
+
+Testing required creating Application records with different Student and Job combinations.
+
+I tested invalid CGPA conditions and verified that Salesforce rejected the Application with a meaningful error message.
+
+## What I Improved
+
+- Apex Trigger design
+- Before/after trigger understanding
+- Service-layer architecture
+- Bulkified Apex
+- Error handling using addError()
+- Salesforce deployment and testing
