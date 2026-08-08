@@ -1,0 +1,124 @@
+Q1. Create a new Student record.
+
+Student__c student = new Student__c(
+    Name = 'Test Student',
+    CGPA__c = 8,
+    Department__c = 'CSE',
+    Email__c = 'teststudent@example.com',
+    Phone__c = '9876543210'
+);
+insert student;
+
+
+Q2. Update the CGPA of an existing Student.
+
+Student__c student = [
+    SELECT Id, CGPA__c
+    FROM Student__c
+    WHERE Name = 'Test Student'
+    LIMIT 1
+];
+student.CGPA__c = 9;
+update student;
+
+
+Q3. Delete a Student record.
+
+Student__c student = [
+    SELECT Id
+    FROM Student__c
+    WHERE Name = 'Test Student'
+    LIMIT 1
+];
+delete student;
+
+
+Q4. Create a new Application record.
+
+Application__c app = new Application__c(
+    Student__c = 'STUDENT_ID',
+    Job__c = 'JOB_ID',
+    Applicationn_Date__c = Date.today(),
+    Status__c = 'Applied'
+);
+insert app;
+
+
+Q5. Update an existing Application Status.
+
+Application__c app = [
+    SELECT Id, Status__c
+    FROM Application__c
+    WHERE Id = 'APPLICATION_ID'
+    LIMIT 1
+];
+app.Status__c = 'Selected';
+update app;
+
+
+Q6. Insert multiple Student records.
+
+List<Student__c> students = new List<Student__c>();
+students.add(new Student__c(
+    Name = 'Test Student 1',
+    CGPA__c = 8,
+    Department__c = 'CSE'
+));
+students.add(new Student__c(
+    Name = 'Test Student 2',
+    CGPA__c = 9,
+    Department__c = 'ECE'
+));
+insert students;
+
+
+Q7. Update multiple Student records.
+
+List<Student__c> students = [
+    SELECT Id, CGPA__c
+    FROM Student__c
+    WHERE Department__c = 'CSE'
+];
+for (Student__c student : students) {
+    student.CGPA__c = 8;
+}
+update students;
+
+
+Q8. Delete multiple test Student records.
+
+List<Student__c> students = [
+    SELECT Id
+    FROM Student__c
+    WHERE Name LIKE 'Test Student%'
+];
+if (!students.isEmpty()) {
+    delete students;
+}
+
+
+Q9. Create an Application only after checking for duplicate.
+
+List<Application__c> existingApps = [
+    SELECT Id
+    FROM Application__c
+    WHERE Student__c = 'STUDENT_ID'
+    AND Job__c = 'JOB_ID'
+];
+if (existingApps.isEmpty()) {
+
+    Application__c app = new Application__c(
+        Student__c = 'STUDENT_ID',
+        Job__c = 'JOB_ID',
+        Applicationn_Date__c = Date.today(),
+        Status__c = 'Applied'
+    );
+    insert app;
+}
+
+
+Q10. Practice the three basic DML operations.
+
+insert record;
+update record;
+delete record;
