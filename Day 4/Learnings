@@ -1,0 +1,51 @@
+# Day 4 – Learning Notes
+
+## Lightning Web Components
+
+Lightning Web Components (LWC) is Salesforce's modern framework for building user interfaces using web standards such as HTML, JavaScript and CSS.
+
+## LWC Structure
+
+An LWC normally contains three important files:
+
+- HTML – Responsible for the page layout and UI.
+- JavaScript – Responsible for variables, logic and events.
+- Meta XML – Controls where the component can be used and exposed.
+
+## Data Binding
+
+Data binding connects JavaScript properties with the HTML template.
+
+Example:
+
+{studentName}
+
+The value comes from the JavaScript property:
+
+studentName = 'Rahul';
+
+## Event Handling
+
+I used a button click event to call a JavaScript method.
+
+Example:
+
+onclick={showWelcomeMessage}
+
+The method changes the welcome message displayed on the page.
+
+## Application Status
+
+I used JavaScript to change:
+
+Not Applied → Applied
+
+No Apex or database was required for this activity.
+
+## LWC and Apex
+
+LWC is responsible for the user interface, while Apex can be used for server-side business logic and database operations.
+
+## Main Learning
+
+I learned how a Salesforce user interface can be created using LWC and how HTML, JavaScript and metadata work together to create a Lightning component.
