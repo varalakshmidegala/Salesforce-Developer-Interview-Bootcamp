@@ -1,0 +1,111 @@
+# Day 5 – Learning Notes
+
+## 1. SOQL
+
+SOQL stands for Salesforce Object Query Language.
+
+It is used to retrieve data from Salesforce objects.
+
+Example:
+
+SELECT Id, Name, CGPA__c
+FROM Student__c
+WHERE CGPA__c >= 7
+
+---
+
+## 2. DML
+
+DML is used to modify Salesforce records.
+
+The main DML operations practiced were:
+
+- INSERT
+- UPDATE
+- DELETE
+
+---
+
+## 3. INSERT
+
+INSERT is used to create a new record.
+
+Example:
+
+insert app;
+
+---
+
+## 4. UPDATE
+
+UPDATE is used to modify an existing record.
+
+Example:
+
+update app;
+
+---
+
+## 5. DELETE
+
+DELETE is used to remove a record.
+
+Example:
+
+delete student;
+
+---
+
+## 6. Duplicate Checking
+
+Before creating an Application, the system checks whether the same
+Student has already applied for the same Job.
+
+The check uses:
+
+- Student__c
+- Job__c
+
+---
+
+## 7. Eligibility Validation
+
+The Student CGPA is compared with the Job Minimum CGPA.
+
+Condition:
+
+Student CGPA >= Job Minimum CGPA
+
+Only eligible Students should proceed with the Application.
+
+---
+
+## 8. Apex Service Class
+
+ApplicationService was used to keep Application-related business
+logic organized inside an Apex class.
+
+---
+
+## 9. Bulkification
+
+When processing multiple records, records should be stored in a List
+and processed together.
+
+Example:
+
+List<Student__c> students = new List<Student__c>();
+
+insert students;
+
+This helps avoid unnecessary DML operations and Governor Limit issues.
+
+---
+
+## Key Learning
+
+SOQL → Retrieve data
+
+DML → Modify data
+
+Apex Service → Handle business logic
