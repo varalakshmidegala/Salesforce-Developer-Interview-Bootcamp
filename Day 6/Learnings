@@ -1,0 +1,61 @@
+# Day 6 – Apex Triggers
+
+## What I Learned
+
+Today I learned how Apex Triggers allow Salesforce to respond automatically to business events.
+
+A Trigger can execute automatically when records are inserted, updated, deleted, or undeleted.
+
+## Before vs After
+
+### Before Trigger
+
+Used when validation or field changes need to happen before the record is saved.
+
+Example:
+- Validate CGPA
+- Validate job closing date
+- Prevent duplicate applications
+
+### After Trigger
+
+Used when the record has already been successfully saved and further actions need to happen.
+
+## Trigger and Service Architecture
+
+A Trigger should coordinate the business event.
+
+The Service class should contain the actual business logic.
+
+My architecture:
+
+ApplicationTrigger
+        ↓
+ApplicationService
+        ↓
+Business Validation
+
+This makes the code easier to maintain and extend.
+
+## Bulkification
+
+The Trigger should work correctly when multiple Application records are processed together.
+
+Therefore, I used:
+- Sets to collect IDs
+- Maps to store queried records
+- SOQL outside loops
+- Processing using Trigger.new
+
+## Business Rules Implemented
+
+1. New Applications automatically receive the status "Applied".
+2. Student CGPA is checked against the Job's minimum CGPA.
+3. Applications after the Job closing date are rejected.
+4. Duplicate Student + Job applications are rejected.
+
+## Key Lesson
+
+A Trigger should coordinate, not contain all the business logic.
+
+Business logic should remain inside Service classes.
