@@ -1,0 +1,43 @@
+# Day 9 – Challenges
+
+## Challenges Faced
+
+### 1. Connecting VS Code with Salesforce Playground
+Initially, connecting the local Salesforce project with the correct Playground was challenging.
+
+### Solution
+- Authorized the Playground using Salesforce CLI.
+- Created the `PlacementOrg` alias.
+- Verified the connection using `sf org list`.
+- Set `PlacementOrg` as the target org.
+
+### 2. Understanding the Salesforce DX Project Structure
+Understanding where the LWC files should be placed was initially confusing.
+
+### Solution
+- Used the standard Salesforce DX structure.
+- Stored LWC components inside:
+  `force-app/main/default/lwc`
+
+### 3. Deploying LWC Components
+Deploying the components from VS Code to Salesforce required understanding the Salesforce CLI deployment process.
+
+### Solution
+- Used the Salesforce CLI deployment command.
+- Verified the deployment result in the terminal.
+- Confirmed the deployment status as `Succeeded`.
+
+### 4. Adding the Component in Lightning App Builder
+While adding the `eligibleJobs` component, Salesforce displayed a warning asking for a valid insertion point.
+
+### Solution
+- Selected an empty region on the Lightning page.
+- Placed the `Eligible Jobs` component in the valid region.
+- Saved the Lightning page successfully.
+
+### 5. Verifying the Final Result
+It was necessary to confirm that the component was not only deployed but also visible on the actual Lightning page.
+
+### Solution
+- Opened the Placement Home page.
+- Verified that the `Eligible Jobs` component appeared successfully.
