@@ -1,0 +1,37 @@
+# Day 9 – Learning Notes
+
+## Topics Learned
+
+### 1. Lightning Web Components (LWC)
+- Learned how Lightning Web Components are structured in Salesforce.
+- Understood the role of HTML, JavaScript, and metadata XML files in an LWC.
+- Worked with the `eligibleJobs` and `placementHome` components.
+
+### 2. Salesforce DX Project Structure
+- Worked with the Salesforce DX project structure.
+- Understood the purpose of `force-app/main/default`.
+- Learned how LWC components are stored inside the `lwc` folder.
+- Worked with `sfdx-project.json` and the Salesforce API version.
+
+### 3. Salesforce CLI
+- Connected the Salesforce Playground to VS Code using Salesforce CLI.
+- Used an org alias (`PlacementOrg`) to identify the target Salesforce org.
+- Set the Playground as the target org for deployment.
+
+### 4. LWC Deployment
+- Deployed LWC components from VS Code to the Salesforce Playground.
+- Used Salesforce CLI deployment commands.
+- Verified that the deployment completed successfully.
+
+### 5. Lightning App Builder
+- Learned how to add a custom LWC to a Lightning page.
+- Added the `eligibleJobs` component to the `placementHome` page.
+- Learned how to select a valid insertion region for a component.
+- Saved the Lightning page after adding the component.
+
+### 6. Testing and Verification
+- Verified the deployed component inside Salesforce.
+- Confirmed that the `Eligible Jobs` component was visible on the Placement Home page.
+- Understood the complete development flow:
+
+VS Code → Salesforce CLI → Playground → Lightning App Builder → Final UI
