@@ -1,0 +1,66 @@
+# Day 10 – Learning Notes
+
+## 1. Lightning Web Components
+
+Learned how LWC components are structured using:
+
+* HTML
+* JavaScript
+* Metadata XML
+
+## 2. LWC and Apex Integration
+
+Learned how to call Apex methods from LWC using:
+
+`@salesforce/apex`
+
+Also learned the difference between cacheable methods used for retrieving data and methods used for modifying data.
+
+## 3. @AuraEnabled
+
+Learned that Apex methods exposed to LWC must use `@AuraEnabled`.
+
+## 4. Passing Parameters
+
+Learned how to pass parameters from JavaScript to Apex, such as:
+
+* Student ID
+* Job ID
+
+## 5. Displaying Salesforce Data
+
+Learned how to display returned Apex records using LWC template directives such as:
+
+* `for:each`
+* `if:true`
+* `if:false`
+
+## 6. Parent-Child Communication
+
+Learned how LWC components can communicate using custom events.
+
+For example, `jobCard` dispatches events such as:
+
+* `viewdetails`
+* `apply`
+
+## 7. Lookup Relationships
+
+Learned how related record information can be retrieved using relationship fields such as:
+
+`Job__r.Name`
+
+## 8. Error Handling
+
+Learned how to handle Apex errors in JavaScript using:
+
+* `.then()`
+* `.catch()`
+
+## 9. Salesforce CLI Deployment
+
+Learned how to deploy individual LWC components and Apex classes from VS Code using Salesforce CLI.
+
+## 10. Overall Learning
+
+Understood how Apex, SOQL, Salesforce objects and LWC work together to create a complete Salesforce application.
