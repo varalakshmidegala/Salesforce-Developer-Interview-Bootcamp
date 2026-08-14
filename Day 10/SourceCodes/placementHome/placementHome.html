@@ -1,0 +1,106 @@
+<template>
+    <lightning-card title="Placement Portal">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Portal Heading -->
+            <h1>
+                <b>Welcome to Vishnu Placement Portal</b>
+            </h1>
+
+            <br />
+
+            <!-- Placement Dashboard -->
+            <p>
+                <strong>Today's Date :</strong> {todayDate}
+            </p>
+
+            <p>
+                <strong>Welcome Student :</strong> {studentName}
+            </p>
+
+            <br />
+
+            <p>
+                <strong>Number of Companies :</strong> {numberOfCompanies}
+            </p>
+
+            <p>
+                <strong>Number of Jobs :</strong> {numberOfJobs}
+            </p>
+
+            <p>
+                <strong>Applications Submitted :</strong> {applicationsSubmitted}
+            </p>
+
+            <br />
+
+            <!-- Student Details -->
+            <h2>
+                <b>Student Details</b>
+            </h2>
+
+            <p>
+                <strong>Student Name :</strong> {studentName}
+            </p>
+
+            <p>
+                <strong>Roll Number :</strong> {rollNumber}
+            </p>
+
+            <p>
+                <strong>Department :</strong> {department}
+            </p>
+
+            <br />
+
+            <!-- Student Profile Component -->
+            <c-student-profile
+                student-id={studentId}
+                onprofileupdated={handleProfileUpdated}>
+            </c-student-profile>
+
+            <br />
+
+            <!-- Profile Update Message -->
+            <template if:true={profileUpdateMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_success">
+                    <span>{profileUpdateMessage}</span>
+                </div>
+            </template>
+
+            <br />
+
+            <!-- Welcome Message -->
+            <lightning-button
+                label="Show Welcome Message"
+                onclick={showWelcomeMessage}>
+            </lightning-button>
+
+            <br />
+            <br />
+
+            <template if:true={welcomeMessage}>
+                <p>
+                    <strong>{welcomeMessage}</strong>
+                </p>
+            </template>
+
+            <br />
+
+            <!-- Application Status -->
+            <p>
+                <strong>Status :</strong> {applicationStatus}
+            </p>
+
+            <br />
+
+            <lightning-button
+                label="Apply for Job"
+                onclick={applyForJob}>
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
+</template>

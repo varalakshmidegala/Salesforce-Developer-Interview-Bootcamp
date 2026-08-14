@@ -1,0 +1,31 @@
+<template>
+
+    <lightning-card title={application.Job__r.Name}>
+
+        <div class="slds-p-around_medium">
+
+            <p>
+                <strong>Company:</strong>
+                {application.Job__r.Company__c}
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                {application.Job__r.Location__c}
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                {application.Status__c}
+            </p>
+
+            <p>
+                <strong>Application Date:</strong>
+                {application.Applicationn_Date__c}
+            </p>
+
+        </div>
+
+    </lightning-card>
+
+</template>

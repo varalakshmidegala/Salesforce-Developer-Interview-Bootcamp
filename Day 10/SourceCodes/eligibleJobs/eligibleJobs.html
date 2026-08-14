@@ -1,0 +1,31 @@
+<template>
+
+    <lightning-card title="Eligible Jobs">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={jobs.length}>
+
+                <template for:each={jobs} for:item="job">
+
+                    <c-job-card
+                        key={job.Id}
+                        job={job}
+                        onapply={handleApply}>
+                    </c-job-card>
+
+                </template>
+
+            </template>
+
+            <template if:false={jobs.length}>
+
+                <p>No eligible jobs found.</p>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>

@@ -1,0 +1,32 @@
+<template>
+
+    <lightning-card title="My Applications">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={applications.length}>
+
+                <template
+                    for:each={applications}
+                    for:item="application">
+
+                    <c-application-card
+                        key={application.Id}
+                        application={application}>
+                    </c-application-card>
+
+                </template>
+
+            </template>
+
+            <template if:false={applications.length}>
+
+                <p>No applications found.</p>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>

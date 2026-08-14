@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Student Profile" icon-name="standard:contact">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-record-edit-form
+                record-id={studentId}
+                object-api-name="Student__c"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+
+                <lightning-messages></lightning-messages>
+
+                <lightning-input-field
+                    field-name="Name">
+                </lightning-input-field>
+
+                <lightning-input-field
+                    field-name="Phone__c">
+                </lightning-input-field>
+
+                <lightning-input-field
+                    field-name="Email__c">
+                </lightning-input-field>
+
+                <lightning-input-field
+                    field-name="Department__c">
+                </lightning-input-field>
+
+                <lightning-input-field
+                    field-name="CGPA__c">
+                </lightning-input-field>
+
+                <div class="slds-m-top_medium">
+                    <lightning-button
+                        type="submit"
+                        variant="brand"
+                        label="Save Profile">
+                    </lightning-button>
+                </div>
+
+            </lightning-record-edit-form>
+
+            <!-- Success Message -->
+            <template if:true={successMessage}>
+                <div class="slds-m-top_medium slds-text-color_success">
+                    <strong>{successMessage}</strong>
+                </div>
+            </template>
+
+            <!-- Error Message -->
+            <template if:true={errorMessage}>
+                <div class="slds-m-top_medium slds-text-color_error">
+                    <strong>{errorMessage}</strong>
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>
