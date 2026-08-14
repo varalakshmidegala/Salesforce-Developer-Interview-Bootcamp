@@ -1,0 +1,75 @@
+# Day 10 – Challenges Faced
+
+## 1. Apex Method Not Found
+
+While deploying the Eligible Jobs component, Salesforce reported that it could not find:
+
+`ApplicationController.createApplication`
+
+### Solution
+
+Added the required `@AuraEnabled` `createApplication()` method to `ApplicationController`.
+
+---
+
+## 2. Apex Metadata API Version Error
+
+`ApplicationController.cls-meta.xml` initially had an invalid API version.
+
+### Solution
+
+Updated the metadata file to use API version `67.0`.
+
+---
+
+## 3. XML Entered Directly in PowerShell
+
+The Lightning Component metadata XML was accidentally entered directly into PowerShell.
+
+### Error
+
+PowerShell treated `<` as a command instead of XML.
+
+### Solution
+
+Placed the XML inside the appropriate `.js-meta.xml` file instead of entering it directly in the terminal.
+
+---
+
+## 4. Field API Name Confusion
+
+The project contained both:
+
+* `Application_Date__c`
+* `Applicationn_Date__c`
+
+### Solution
+
+Used the actual field API name available in the Salesforce org when writing Apex and LWC code.
+
+---
+
+## 5. Testing Application Records
+
+Some older test application records had blank status and application date values.
+
+### Solution
+
+Verified newly created applications through SOQL and confirmed that the application flow correctly populated:
+
+* Status = `Applied`
+* Application Date
+
+---
+
+## 6. LWC Deployment
+
+Several LWC components needed to be deployed individually while developing the Placement Portal.
+
+### Solution
+
+Used Salesforce CLI source deployment commands from VS Code and verified successful deployment.
+
+## Key Takeaway
+
+The main challenge was connecting LWC components correctly with Apex methods and ensuring that the API names in the code matched the actual Salesforce metadata.
